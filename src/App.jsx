@@ -435,19 +435,43 @@ function Contact() {
         <div className="rounded-2xl border border-green-900/10 bg-white p-6 shadow-sm">
           <h4 className="font-semibold text-green-900">Contact</h4>
           <p className="mt-2 text-gray-700">Owner: Mr. Harmohit Singh</p>
-          <p className="mt-1 text-gray-700">Phone: <a href="tel:+919876109062" className="text-green-700">+91 9876109062</a></p>
-          <p className="mt-1 text-gray-700">Email: <a href="mailto:birgienterprises@gmail.com" className="text-green-700">birgienterprises@gmail.com</a></p>
+          <p className="mt-1 text-gray-700">
+            Phone: <a href="tel:+919876109062" className="text-green-700">+91 9876109062</a>
+          </p>
+          <p className="mt-1 text-gray-700">
+            Email: <a href="mailto:birgienterprises@gmail.com" className="text-green-700">birgienterprises@gmail.com</a>
+          </p>
         </div>
         <div className="rounded-2xl border border-green-900/10 bg-white p-6 shadow-sm">
           <h4 className="font-semibold text-green-900">Get in Touch</h4>
-          <a href="https://wa.me/919876109062" target="_blank" className="mt-3 inline-flex rounded-2xl bg-green-700 px-5 py-3 text-white shadow hover:bg-green-800">Enquire on WhatsApp</a>
+          <a
+            href="https://wa.me/919876109062"
+            target="_blank"
+            className="mt-3 inline-flex rounded-2xl bg-green-700 px-5 py-3 text-white shadow hover:bg-green-800"
+          >
+            Enquire on WhatsApp
+          </a>
           <p className="mt-2 text-xs text-gray-500">We usually reply within hours.</p>
         </div>
       </div>
-      <p className="mt-8 text-center text-xs text-gray-500">© {new Date().getFullYear()} Birgi Enterprises • Quality First, Always</p>
+
+      {/* Footer text */}
+      <p className="mt-8 text-center text-x text-gray-500">
+        © {new Date().getFullYear()} Birgi Enterprises • Quality First, Always
+        <br /><br />
+        Developed by{" "}
+        <a
+          href="https://codesangam-blue.vercel.app/"
+          target="_blank"
+          className="text-green-700 hover:underline font-medium"
+        >
+          Code Sangam
+        </a>
+      </p>
     </Section>
   );
 }
+
 
 export default function App() {
   return (
