@@ -81,8 +81,9 @@ function Navbar() {
   return (
     <div className="sticky top-0 z-50 border-b border-green-900/5 bg-white/70 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-      <motion.div 
-              className="w-30 h-20 lg:w-14 lg:h-10 rounded-2xl overflow-hidden"
+        <a href="#top" className="group inline-flex items-center gap-2">
+        <motion.div 
+              className="w-15 h-10 lg:w-14 lg:h-10 rounded-2xl overflow-hidden"
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.5 }}
             >
@@ -92,6 +93,8 @@ function Navbar() {
                 className="w-full h-full "
               />
             </motion.div>
+          <span className="text-lg font-extrabold text-green-900 tracking-tight">Birgi Enterprises</span>
+        </a>
         <nav className="hidden items-center gap-6 md:flex">
           {links.map(([label, href]) => (
             <a key={href} href={href} className="text-sm font-medium text-green-900/80 hover:text-green-900">
@@ -194,7 +197,7 @@ function About() {
         </motion.div>
         <motion.div variants={fadeUp} className="rounded-2xl border border-green-900/10 bg-white p-6 shadow-sm">
           <h3 className="text-lg font-bold text-green-900">Who We Serve</h3>
-          <p className="mt-3 text-gray-700">Farmers, nurseries, hotels, schools, societies and home gardeners across India who seek better soil fertility and long-term crop health.</p>
+          <p className="mt-3 text-gray-700">Farmers, nurseries, and home gardeners across India who seek better soil fertility and long-term crop health.</p>
           <div className="mt-4 flex flex-wrap gap-2">
             <Pill>Amritsar, Punjab</Pill>
             <Pill>Pan-India Customers</Pill>
@@ -356,17 +359,17 @@ function Testimonials() {
     {
       quote:
         "Switched from chemicals to Farm Fresh Vermicompost — soil feels alive, and yields improved!",
-      name: "Guru Nanak nursery",
-    },
-    {
-      quote:
-        "Perfect for my terrace garden. Plants are healthier and greener than ever.",
       name: "Golden Nursery",
     },
     {
       quote:
+        "Perfect for my terrace garden. Plants are healthier and greener than ever.",
+      name: "Khan Nursery",
+    },
+    {
+      quote:
         "Timely delivery and great quality. Highly recommended for nurseries.",
-      name: "Khan Nursery ",
+      name: "Guru Nanak Nursery",
     },
   ];
 
