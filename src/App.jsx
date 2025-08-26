@@ -4,9 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 // ⚠️ Place your product image at: src/assets/vermicompost.png
 // Then update the path below if needed
 import product from "./assets/product.png";
-import product1 from "./assets/product1.jpg";
+import Logo from "./assets/logo.png";
+import P5kg from "./assets/5kg.jpg";
+import P1kg from "./assets/1kg.jpg";
 import earthwormImg from "./assets/earthworm.jpg";
-import product2 from "./assets/product2.jpg";
+import P10kg from "./assets/10kg.jpg";
 // --- Shared animation presets ---
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -79,10 +81,17 @@ function Navbar() {
   return (
     <div className="sticky top-0 z-50 border-b border-green-900/5 bg-white/70 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <a href="#top" className="group inline-flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-green-500 to-lime-400 shadow-inner" />
-          <span className="text-lg font-extrabold text-green-900 tracking-tight">Birgi Enterprises</span>
-        </a>
+      <motion.div 
+              className="w-30 h-10 lg:w-22 lg:h-10 rounded-2xl overflow-hidden"
+              whileHover={{ rotate: 360, scale: 1.1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <img 
+                src={Logo} 
+                alt="Code Sangam Logo" 
+                className="w-full h-full "
+              />
+            </motion.div>
         <nav className="hidden items-center gap-6 md:flex">
           {links.map(([label, href]) => (
             <a key={href} href={href} className="text-sm font-medium text-green-900/80 hover:text-green-900">
@@ -156,7 +165,7 @@ function Hero() {
             initial={{ y: -10 }}
             animate={{ y: 10 }}
             transition={{ repeat: Infinity, repeatType: "reverse", duration: 2.2 }}
-            className="absolute -right-4 top-6 rounded-full bg-gradient-to-br from-lime-400 to-green-500 px-4 py-2 text-sm font-bold text-green-950 shadow-xl"
+            className="absolute -right-4 top-6 rounded-full bg-gradient-to-br from-lime-400 to-blue-500 px-4 py-2 text-sm font-bold text-green-950 shadow-xl"
           >
             15+ Years of Trust
           </motion.div>
@@ -185,7 +194,7 @@ function About() {
         </motion.div>
         <motion.div variants={fadeUp} className="rounded-2xl border border-green-900/10 bg-white p-6 shadow-sm">
           <h3 className="text-lg font-bold text-green-900">Who We Serve</h3>
-          <p className="mt-3 text-gray-700">Farmers, nurseries, and home gardeners across India who seek better soil fertility and long-term crop health.</p>
+          <p className="mt-3 text-gray-700">Farmers, nurseries, hotels, schools, societies and home gardeners across India who seek better soil fertility and long-term crop health.</p>
           <div className="mt-4 flex flex-wrap gap-2">
             <Pill>Amritsar, Punjab</Pill>
             <Pill>Pan-India Customers</Pill>
@@ -197,9 +206,9 @@ function About() {
   );
 }
 const products = [
-  { size: "1 kg", desc: "Perfect for kitchen gardens, houseplants & terrace gardens.", cta: "Order on WhatsApp", img: product },
-  { size: "5 kg", desc: "Great for small farms, nurseries & bulk gardening.", cta: "Order on WhatsApp", img: product1 },
-  { size: "10 kg", desc: "Ideal for large-scale farming & commercial use.", cta: "Order on WhatsApp", img: product2 },
+  { size: "1 kg", desc: "Perfect for kitchen gardens, houseplants & terrace gardens.", cta: "Order on WhatsApp", img: P1kg },
+  { size: "5 kg", desc: "Great for small farms, nurseries & bulk gardening.", cta: "Order on WhatsApp", img: P5kg },
+  { size: "10 kg", desc: "Ideal for large-scale farming & commercial use.", cta: "Order on WhatsApp", img: P10kg },
   { size: "Earthworms", desc: "Live earthworms for starting your own composting system.", cta: "Enquire on WhatsApp", img: earthwormImg },
 ];
 
@@ -294,9 +303,10 @@ function WhyUs() {
 
         {/* Comparison card */}
         <motion.div variants={fadeUp} className="overflow-hidden rounded-2xl border border-green-900/10 bg-white shadow-sm">
-          <div className="grid grid-cols-2 bg-green-50 px-6 py-4 text-xs font-bold uppercase tracking-wide text-green-900">
+          <div className="grid grid-cols-3 bg-green-50 px-6 py-4 items-center justify-center text-xs font-bold uppercase tracking-wide text-green-900">
             <div>Feature</div>
-            <div className="text-right">Vermicompost vs Chemical</div>
+            <div >Vermicompost</div>
+            <div >Chemical</div>
           </div>
           <div className="divide-y divide-green-900/10">
             {[
@@ -346,17 +356,17 @@ function Testimonials() {
     {
       quote:
         "Switched from chemicals to Farm Fresh Vermicompost — soil feels alive, and yields improved!",
-      name: "Karan, Ludhiana",
+      name: "Guru Nanak nursery",
     },
     {
       quote:
         "Perfect for my terrace garden. Plants are healthier and greener than ever.",
-      name: "Riya, New Delhi",
+      name: "Golden Nursery",
     },
     {
       quote:
         "Timely delivery and great quality. Highly recommended for nurseries.",
-      name: "Arun, Jaipur",
+      name: "Khan Nursery ",
     },
   ];
 
@@ -461,7 +471,7 @@ function Contact() {
         <br /><br />
         Developed by{" "}
         <a
-          href="https://codesangam-blue.vercel.app/"
+          href="https://codesangam.tech/"
           target="_blank"
           className="text-green-700 hover:underline font-medium"
         >
