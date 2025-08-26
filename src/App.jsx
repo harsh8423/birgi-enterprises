@@ -82,7 +82,7 @@ function Navbar() {
     <div className="sticky top-0 z-50 border-b border-green-900/5 bg-white/70 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
       <motion.div 
-              className="w-30 h-10 lg:w-22 lg:h-10 rounded-2xl overflow-hidden"
+              className="w-30 h-20 lg:w-14 lg:h-10 rounded-2xl overflow-hidden"
               whileHover={{ rotate: 360, scale: 1.1 }}
               transition={{ duration: 0.5 }}
             >
